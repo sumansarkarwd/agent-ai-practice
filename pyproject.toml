@@ -5,11 +5,21 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "dotenv>=0.9.9",
+    "langchain>=1.3.1",
+    "langchain-openai>=1.2.2",
+    "langchain-tavily>=0.2.18",
+    "langsmith>=0.8.5",
     "openai>=2.38.0",
+    "python-dotenv>=1.2.2",
+    "ruff>=0.15.14",
+    "tavily>=1.1.0",
 ]
 
 [dependency-groups]
-dev = [
-    "ruff>=0.15.14",
-]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+line_length = 88
