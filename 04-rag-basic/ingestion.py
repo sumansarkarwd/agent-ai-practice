@@ -39,9 +39,7 @@ def main():
     print(f"Create {len(texts)} chunks!")
 
     print("Ingesting...")
-    embeddings = OpenAIEmbeddings(
-        openai_api_key=OPEN_AI_KEY, openai_api_base="https://openai.vocareum.com/v1"
-    )
+    embeddings = OpenAIEmbeddings(openai_api_key=OPEN_AI_KEY)
     PineconeVectorStore.from_documents(texts, embeddings, index_name=INDEX_NAME)
 
 
